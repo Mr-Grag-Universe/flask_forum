@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Forum</title>
+</head>
+
+<body>
+    {% block navigation %}
+        <!--table>
+            <tr>
+                <td>Forums</td>
+                <td></td>
+            </tr>
+        </table-->
+        <header class="nav_bar_head">
+            <div class="nav_bar_div">
+                <a href="#">
+                    <img src="" alt="">
+                </a>
+                <nav class="nav_bar_nav">
+                    <div>
+                        <!--ul class="nav_bar_ul">
+                            <li>
+                                <a>Home</a>
+                            </li>
+                            <li>
+                                <a>Forums</a>
+                            </li>
+                        </ul-->
+                        <table class="nav_bar_table">
+                            <tr class="nav_bar_tr">
+                                <th><a href="{{ url_for('home_render') }}" class="nav_bar_link">Home</a></th>
+                                <th><a>Forums</a></th>
+                            </tr>
+                        </table>
+                    </div>
+                </nav>
+            </div>
+        </header>
+    {% endblock %}
+
+    {% block contant %}
+        <div class="main_contant">
+            Hello! This is my blog and my rules
+        </div>
+    {% endblock %}
+
+    {% block footer %}
+        <footer></footer>
+    {% endblock %}
+</body>
+
+
+{% block scripts %}
+    <link href="{{ url_for('static', filename='css/base_style.css') }}" rel="stylesheet">
+{% endblock %}
+
+</html>
