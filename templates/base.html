@@ -33,7 +33,13 @@
                         <table class="nav_bar_table">
                             <tr class="nav_bar_tr">
                                 <th><a href="{{ url_for('home_render') }}" class="nav_bar_link">Home</a></th>
-                                <th><a>Forums</a></th>
+                                <th><a href="{{ url_for('home_render') }}" class="nav_bar_link">Forums</a></th>
+                                <th>
+                                    <ul id="log">
+                                        <li><a href="{{ url_for('home_render') }}" class="nav_bar_link">Signin</a></li>
+                                        <li><a href="{{ url_for('home_render') }}" class="nav_bar_link">Signup</a></li>
+                                    </ul>
+                                </th>
                             </tr>
                         </table>
                     </div>
